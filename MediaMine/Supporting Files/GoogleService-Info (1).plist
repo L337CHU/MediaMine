@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>265850114939-2t14i7085tqeioes9bb0nns2e3pjrvht.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.265850114939-2t14i7085tqeioes9bb0nns2e3pjrvht</string>
+	<key>API_KEY</key>
+	<string>AIzaSyArGmjmQsgUfCBSelrW4IVvVak9CrmLwGU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>265850114939</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.MediaMine.MediaMine</string>
+	<key>PROJECT_ID</key>
+	<string>mediamine</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mediamine.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:265850114939:ios:f1aee865df6298f7</string>
+	<key>DATABASE_URL</key>
+	<string>https://mediamine.firebaseio.com</string>
+</dict>
+</plist>
