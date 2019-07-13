@@ -7,6 +7,7 @@ target 'MediaMine' do
   # Pods for MediaMine
 
     pod 'Alamofire'
+    pod 'Firebase/Core'
 
 
 end

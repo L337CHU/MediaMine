@@ -12,6 +12,7 @@
 		C41371A022D9AFBF00EA646B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C413719E22D9AFBF00EA646B /* Main.storyboard */; };
 		C41371A222D9AFC000EA646B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41371A122D9AFC000EA646B /* Assets.xcassets */; };
 		C41371A522D9AFC000EA646B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41371A322D9AFC000EA646B /* LaunchScreen.storyboard */; };
+		C41371B122DA9AA200EA646B /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = C41371B022DA9AA200EA646B /* GoogleService-Info (1).plist */; };
 		CA0CFA77377B119810654A36 /* Pods_MediaMine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD1832C4EF47B497755EDA9 /* Pods_MediaMine.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		C41371A122D9AFC000EA646B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C41371A422D9AFC000EA646B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C41371A622D9AFC000EA646B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C41371B022DA9AA200EA646B /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		C41371AF22D9B37200EA646B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C41371B022DA9AA200EA646B /* GoogleService-Info (1).plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				C41371A522D9AFC000EA646B /* LaunchScreen.storyboard in Resources */,
 				C41371A222D9AFC000EA646B /* Assets.xcassets in Resources */,
 				C41371A022D9AFBF00EA646B /* Main.storyboard in Resources */,
+				C41371B122DA9AA200EA646B /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +394,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MediaMine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MediaMine.MediaMine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,7 +413,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MediaMine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MediaMine.MediaMine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
