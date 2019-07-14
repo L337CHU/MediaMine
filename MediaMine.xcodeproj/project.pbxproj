@@ -12,7 +12,7 @@
 		C41371A022D9AFBF00EA646B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C413719E22D9AFBF00EA646B /* Main.storyboard */; };
 		C41371A222D9AFC000EA646B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41371A122D9AFC000EA646B /* Assets.xcassets */; };
 		C41371A522D9AFC000EA646B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41371A322D9AFC000EA646B /* LaunchScreen.storyboard */; };
-		C41371B122DA9AA200EA646B /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = C41371B022DA9AA200EA646B /* GoogleService-Info (1).plist */; };
+		C41371B122DA9AA200EA646B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41371B022DA9AA200EA646B /* GoogleService-Info.plist */; };
 		CA0CFA77377B119810654A36 /* Pods_MediaMine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD1832C4EF47B497755EDA9 /* Pods_MediaMine.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 		C41371A122D9AFC000EA646B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C41371A422D9AFC000EA646B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C41371A622D9AFC000EA646B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C41371B022DA9AA200EA646B /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		C41371B022DA9AA200EA646B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +84,6 @@
 				C41371AD22D9B31400EA646B /* View */,
 				C41371AE22D9B31C00EA646B /* Controller */,
 				C41371AF22D9B37200EA646B /* Supporting Files */,
-				C41371A622D9AFC000EA646B /* Info.plist */,
-				C41371A322D9AFC000EA646B /* LaunchScreen.storyboard */,
-				C41371A122D9AFC000EA646B /* Assets.xcassets */,
 			);
 			path = MediaMine;
 			sourceTree = "<group>";
@@ -118,7 +115,10 @@
 		C41371AF22D9B37200EA646B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C41371B022DA9AA200EA646B /* GoogleService-Info (1).plist */,
+				C41371A122D9AFC000EA646B /* Assets.xcassets */,
+				C41371A322D9AFC000EA646B /* LaunchScreen.storyboard */,
+				C41371A622D9AFC000EA646B /* Info.plist */,
+				C41371B022DA9AA200EA646B /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 				C41371A522D9AFC000EA646B /* LaunchScreen.storyboard in Resources */,
 				C41371A222D9AFC000EA646B /* Assets.xcassets in Resources */,
 				C41371A022D9AFBF00EA646B /* Main.storyboard in Resources */,
-				C41371B122DA9AA200EA646B /* GoogleService-Info (1).plist in Resources */,
+				C41371B122DA9AA200EA646B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +389,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HR6224TK7M;
-				INFOPLIST_FILE = MediaMine/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MediaMine/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HR6224TK7M;
-				INFOPLIST_FILE = MediaMine/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MediaMine/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
