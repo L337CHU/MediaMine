@@ -93,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				C413719E22D9AFBF00EA646B /* Main.storyboard */,
+				C41371A322D9AFC000EA646B /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -101,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				C413719C22D9AFBF00EA646B /* LogInViewController.swift */,
-				C413719A22D9AFBF00EA646B /* AppDelegate.swift */,
 				C4079A9422DEC3CC00CA72B5 /* RegisterViewController.swift */,
+				C413719A22D9AFBF00EA646B /* AppDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -111,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				C41371A122D9AFC000EA646B /* Assets.xcassets */,
-				C41371A322D9AFC000EA646B /* LaunchScreen.storyboard */,
 				C41371A622D9AFC000EA646B /* Info.plist */,
 				C41371B022DA9AA200EA646B /* GoogleService-Info.plist */,
 			);

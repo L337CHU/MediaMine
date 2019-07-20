@@ -494,7 +494,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="regSubmission:" destination="ofe-5x-tEc" eventType="touchUpInside" id="GXv-k4-ZtZ"/>
-                                            <segue destination="Rh5-er-81s" kind="show" identifier="seeNext" id="U4F-Mo-T1N"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="RegEmail" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dIz-13-KtI" userLabel="RegEmail">
@@ -608,11 +607,12 @@
                         <outlet property="userName" destination="w0S-WI-Cu3" id="idw-9K-l8X"/>
                         <outlet property="userPassword" destination="WFG-2p-82B" id="pZj-pD-gqx"/>
                         <outlet property="verifyPassword" destination="MNC-A4-Ypm" id="Ekm-C8-JaE"/>
+                        <segue destination="Rh5-er-81s" kind="show" identifier="seeNext" id="rYa-6S-3xo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHn-UQ-ztg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="421"/>
+            <point key="canvasLocation" x="975" y="385"/>
         </scene>
         <!--Terms And Conditions View Controller-->
         <scene sceneID="bto-Jd-Bqq">
@@ -753,6 +753,6 @@ As long as the website and the information and services on the website are provi
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Eoq-Ui-7qe"/>
-        <segue reference="dPe-I6-gjk"/>
+        <segue reference="rYa-6S-3xo"/>
     </inferredMetricsTieBreakers>
 </document>
