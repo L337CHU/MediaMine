@@ -12,11 +12,11 @@ import Firebase
 class RegisterViewController: UIViewController {
 
     
-    @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userPassword: UITextField!
     @IBOutlet weak var verifyPassword: UITextField!
     @IBOutlet weak var userEmail: UITextField!
     
+    @IBOutlet weak var termsAndAgreement: UISwitch!
     
     
     
@@ -42,8 +42,10 @@ class RegisterViewController: UIViewController {
             if error == nil{
                 //check to see if user agrees to terms and conditions
                 
+        
                 
                 Auth.auth().signIn(withEmail: self.userEmail.text!, password: self.userPassword.text!)
+                
                 //go to next segue
                 self.performSegue(withIdentifier: "seeNext", sender: self)
                 

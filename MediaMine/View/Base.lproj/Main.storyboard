@@ -463,14 +463,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="RegUsername" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0S-WI-Cu3" userLabel="RegUsername">
-                                        <rect key="frame" x="30" y="90" width="219" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration" hint="RegUsername" identifier="RegUsername" label="RegUsername"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="username"/>
-                                    </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Register" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Y4E-SA-8tm">
                                         <rect key="frame" x="91" y="18" width="97" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -497,7 +489,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="RegEmail" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dIz-13-KtI" userLabel="RegEmail">
-                                        <rect key="frame" x="30" y="250" width="219" height="30"/>
+                                        <rect key="frame" x="30" y="87" width="219" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration" hint="email" identifier="RegEmail" label="email"/>
                                         <nil key="textColor"/>
@@ -531,17 +523,6 @@
                                         <accessibility key="accessibilityConfiguration" identifier="AgreeTerms" label="AgreeTerms"/>
                                         <color key="onTintColor" red="0.17254901959999999" green="0.75686274509999996" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </switch>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Username:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Arn-SV-1uX">
-                                        <rect key="frame" x="30" y="63" width="80" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" notEnabled="YES"/>
-                                            <bool key="isElement" value="YES"/>
-                                        </accessibility>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Password:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kQG-QX-irc">
                                         <rect key="frame" x="30" y="117" width="80" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -549,13 +530,6 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Email:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yvo-Lp-1FH">
-                                        <rect key="frame" x="30" y="224" width="80" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -582,6 +556,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Email:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yvo-Lp-1FH">
+                                        <rect key="frame" x="30" y="55" width="80" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -603,8 +584,8 @@
                         <viewLayoutGuide key="safeArea" id="NmK-zv-ucb"/>
                     </view>
                     <connections>
+                        <outlet property="termsAndAgreement" destination="TRn-OZ-R10" id="Ff7-JG-xiw"/>
                         <outlet property="userEmail" destination="dIz-13-KtI" id="8rr-dQ-VHB"/>
-                        <outlet property="userName" destination="w0S-WI-Cu3" id="idw-9K-l8X"/>
                         <outlet property="userPassword" destination="WFG-2p-82B" id="pZj-pD-gqx"/>
                         <outlet property="verifyPassword" destination="MNC-A4-Ypm" id="Ekm-C8-JaE"/>
                         <segue destination="Rh5-er-81s" kind="show" identifier="seeNext" id="rYa-6S-3xo"/>
@@ -752,7 +733,8 @@ As long as the website and the information and services on the website are provi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Eoq-Ui-7qe"/>
+        <segue reference="Til-rZ-nmQ"/>
+        <segue reference="198-hn-ovX"/>
         <segue reference="rYa-6S-3xo"/>
     </inferredMetricsTieBreakers>
 </document>
