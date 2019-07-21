@@ -60,7 +60,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="702-NH-t6o"/>
-                                            <segue destination="Rh5-er-81s" kind="show" identifier="seeNext" id="2YC-HP-ccZ"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Email:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IzT-Ge-TZf">
@@ -131,6 +130,7 @@
                     <connections>
                         <outlet property="userEmail" destination="a80-kd-p3R" id="8a4-dk-xFD"/>
                         <outlet property="userPassword" destination="DGK-83-OoY" id="WgM-0O-eHi"/>
+                        <segue destination="Rh5-er-81s" kind="show" identifier="seeNext" id="qrd-sq-kgM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

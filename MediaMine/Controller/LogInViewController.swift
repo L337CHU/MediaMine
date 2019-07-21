@@ -21,20 +21,39 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
-
-        Auth.auth().signIn(withEmail: userEmail.text!, password: userPassword.text!) { [weak self] user, error in
-            guard
-                let strongSelf = self
-                else { return }
-            // ...
+        
+        guard let email = userEmail.text, let pw = userPassword.text else{
+            print("Complete email and pw")
+            
+            //create alert for user
+            
+            
+            return
         }
         
+        
+        Auth.auth().signIn(withEmail: userEmail.text!, password: userPassword.text!) { [weak self] user, error in
+            guard let strongSelf = self else {
+                return
+                    
+            }
+            if error == nil{
+                self?.performSegue(withIdentifier: "seeNext", sender: self)
+                
+            }
+            
+        }
+        
+        
+        
+       
     }
     
     
     
     
-    
+    //when optional has value
+   // self.performSegue(withIdentifier: "seeNext", sender: self)
     
     
     
