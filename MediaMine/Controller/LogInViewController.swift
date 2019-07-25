@@ -41,9 +41,17 @@ class LogInViewController: UIViewController {
                 self?.performSegue(withIdentifier: "seeNext", sender: self)
                 
             }
-            
+            else{
+                displayAlert(userMessage:"That email and password combination does not exist.");
+            }
         }
         
+        func displayAlert(userMessage:String){
+            let myAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertController.Style.alert);
+            let okAction = UIAlertAction(title:"OK", style: UIAlertAction.Style.default, handler:nil);
+            myAlert.addAction(okAction)
+            self.present(myAlert, animated:true, completion: nil);
+        }
         
         
        
