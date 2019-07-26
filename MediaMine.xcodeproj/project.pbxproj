@@ -17,6 +17,8 @@
 		DF15000BE9D04DFFAD658498 /* Pods_MediaMine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F384711C404C4AAF679F8E32 /* Pods_MediaMine.framework */; };
 		E17754DE22EA0E1C00FC2126 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17754DD22EA0E1C00FC2126 /* Validator.swift */; };
 		E17754E022EA16C500FC2126 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17754DF22EA16C400FC2126 /* DashboardViewController.swift */; };
+		E17754E422EA536F00FC2126 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17754E322EA536F00FC2126 /* SearchViewController.swift */; };
+		E17754E622EA764E00FC2126 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17754E522EA764D00FC2126 /* CompanyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		CBF855A0AF00B1D7927D772A /* Pods-MediaMine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaMine.debug.xcconfig"; path = "Target Support Files/Pods-MediaMine/Pods-MediaMine.debug.xcconfig"; sourceTree = "<group>"; };
 		E17754DD22EA0E1C00FC2126 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		E17754DF22EA16C400FC2126 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		E17754E322EA536F00FC2126 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E17754E522EA764D00FC2126 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		F384711C404C4AAF679F8E32 /* Pods_MediaMine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaMine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,8 @@
 				E17754DD22EA0E1C00FC2126 /* Validator.swift */,
 				C413719A22D9AFBF00EA646B /* AppDelegate.swift */,
 				E17754DF22EA16C400FC2126 /* DashboardViewController.swift */,
+				E17754E322EA536F00FC2126 /* SearchViewController.swift */,
+				E17754E522EA764D00FC2126 /* CompanyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,10 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17754E422EA536F00FC2126 /* SearchViewController.swift in Sources */,
 				E17754DE22EA0E1C00FC2126 /* Validator.swift in Sources */,
 				C4079A9522DEC3CC00CA72B5 /* RegisterViewController.swift in Sources */,
 				E17754E022EA16C500FC2126 /* DashboardViewController.swift in Sources */,
 				C413719D22D9AFBF00EA646B /* LogInViewController.swift in Sources */,
+				E17754E622EA764E00FC2126 /* CompanyViewController.swift in Sources */,
 				C413719B22D9AFBF00EA646B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

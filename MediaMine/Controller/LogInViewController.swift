@@ -3,7 +3,6 @@
 //  MediaMine
 //
 //  Created by Christopher Chu on 7/12/19.
-//  Copyright © 2019 Christopher Chu. All rights reserved.
 //
 
 import UIKit
@@ -19,16 +18,25 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    func displayAlert(userMessage:String){
+        let myAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertController.Style.alert);
+        let okAction = UIAlertAction(title:"OK", style: UIAlertAction.Style.default, handler:nil);
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated:true, completion: nil);
+    }
+    
 
     @IBAction func buttonPressed(_ sender: Any) {
-        
+
         guard let email = userEmail.text, let pw = userPassword.text else{
-            print("Complete email and pw")
-            
-            //create alert for user
-            
             
             return
+        }
+        
+        if email.isEmpty || pw.isEmpty{
+            self.displayAlert(userMessage:"Please enter a valid email and password.");
+            
         }
         
         
@@ -42,19 +50,9 @@ class LogInViewController: UIViewController {
                 
             }
             else{
-                displayAlert(userMessage:"That email and password combination does not exist.");
+                self?.displayAlert(userMessage:"That email and password combination does not exist.");
             }
         }
-        
-        func displayAlert(userMessage:String){
-            let myAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertController.Style.alert);
-            let okAction = UIAlertAction(title:"OK", style: UIAlertAction.Style.default, handler:nil);
-            myAlert.addAction(okAction)
-            self.present(myAlert, animated:true, completion: nil);
-        }
-        
-        
-       
     }
     
     
@@ -62,9 +60,6 @@ class LogInViewController: UIViewController {
     
     //when optional has value
    // self.performSegue(withIdentifier: "seeNext", sender: self)
-    
-    
-    
     
     
 }
