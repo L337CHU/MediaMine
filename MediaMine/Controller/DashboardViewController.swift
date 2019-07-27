@@ -22,7 +22,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         
         //load the saved profile data
         if let dataList = userProfileData.array(forKey: "ProfileArray") as? [String]{
-            temp = dataList
+            temp = dataList.sorted(by: { $0 < $1 })
         }
         
         let user = Auth.auth().currentUser?.email;
@@ -33,17 +33,12 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.delegate = self
     }
     
-    ///////// get user stocks from db...
-   // var temp = ["AAPL", "GOOG", "TSLA"] // temp data
-    ///////////////////////////////////
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return temp.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stockcell", for: indexPath);
-        //let celltext = self.temp[indexPath.row]
         let celltext = temp[indexPath.row]
         cell.textLabel?.text = celltext
         return cell;
@@ -52,12 +47,12 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
         if editingStyle == UITableViewCell.EditingStyle.delete{
             temp.remove(at: indexPath.row)
+            userProfileData.set(temp, forKey: "ProfileArray")
             tableView.reloadData()
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let text = self.temp[indexPath.row]
         let text = temp[indexPath.row]
         self.performSegue(withIdentifier: "selectStock", sender: text)
     }

@@ -13,9 +13,6 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    
-    //saving profile data
-    let userProfileData = UserDefaults.standard
 
     
     override func viewDidLoad() {
@@ -28,14 +25,10 @@ class SearchViewController: UIViewController {
         searchBar.returnKeyType = UIReturnKeyType.done
     }
     
-    //////////////////////////////////////////
-    // populate table view with stock tickers
-    //////////////////////////////////////////
-   
-    //var stocks = ["AAPL", "GOOG", "TSLA"]
     
     var search = [String]()
     var searching = false
+    let stocksSorted = stocks.sorted(by: { $0 < $1 })
     
 }
 
@@ -44,8 +37,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         if searching == true {
             return search.count
         }
-        /////// change to num stock tickers
-        return stocks.count
+        return stocksSorted.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,7 +47,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             text = search[indexPath.row]
         }
         else{
-            text = stocks[indexPath.row]
+            text = stocksSorted[indexPath.row]
         }
         cell.textLabel!.text = text
         return cell
@@ -67,12 +59,9 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             text = self.search[indexPath.row]
         }
         else{
-           // text = self.stocks[indexPath.row]
-            text = stocks[indexPath.row]
+            text = stocksSorted[indexPath.row]
 
         }
-        temp.append(text)
-        userProfileData.set(temp, forKey: "ProfileArray")
         self.performSegue(withIdentifier: "selectCompany", sender: text)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -86,7 +75,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ seachBar: UISearchBar, textDidChange searchText: String){
-        search = stocks.filter({$0.prefix(searchText.count) == searchText})
+        search = stocksSorted.filter({$0.prefix(searchText.count) == searchText})
         searching = true
         tableView.reloadData()
     }
