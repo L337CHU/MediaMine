@@ -14,6 +14,7 @@
 		C41371A222D9AFC000EA646B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41371A122D9AFC000EA646B /* Assets.xcassets */; };
 		C41371A522D9AFC000EA646B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41371A322D9AFC000EA646B /* LaunchScreen.storyboard */; };
 		C41371B122DA9AA200EA646B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41371B022DA9AA200EA646B /* GoogleService-Info.plist */; };
+		C4F31D0D22EC2E1900C25B70 /* profileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F31D0C22EC2E1900C25B70 /* profileData.swift */; };
 		DF15000BE9D04DFFAD658498 /* Pods_MediaMine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F384711C404C4AAF679F8E32 /* Pods_MediaMine.framework */; };
 		E17754DE22EA0E1C00FC2126 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17754DD22EA0E1C00FC2126 /* Validator.swift */; };
 		E17754E022EA16C500FC2126 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17754DF22EA16C400FC2126 /* DashboardViewController.swift */; };
@@ -33,6 +34,7 @@
 		C41371A422D9AFC000EA646B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C41371A622D9AFC000EA646B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C41371B022DA9AA200EA646B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4F31D0C22EC2E1900C25B70 /* profileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileData.swift; sourceTree = "<group>"; };
 		CBF855A0AF00B1D7927D772A /* Pods-MediaMine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaMine.debug.xcconfig"; path = "Target Support Files/Pods-MediaMine/Pods-MediaMine.debug.xcconfig"; sourceTree = "<group>"; };
 		E17754DD22EA0E1C00FC2126 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		E17754DF22EA16C400FC2126 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 		C41371AC22D9B10300EA646B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E17754DD22EA0E1C00FC2126 /* Validator.swift */,
+				C4F31D0C22EC2E1900C25B70 /* profileData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,7 +117,6 @@
 			children = (
 				C413719C22D9AFBF00EA646B /* LogInViewController.swift */,
 				C4079A9422DEC3CC00CA72B5 /* RegisterViewController.swift */,
-				E17754DD22EA0E1C00FC2126 /* Validator.swift */,
 				C413719A22D9AFBF00EA646B /* AppDelegate.swift */,
 				E17754DF22EA16C400FC2126 /* DashboardViewController.swift */,
 				E17754E322EA536F00FC2126 /* SearchViewController.swift */,
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F31D0D22EC2E1900C25B70 /* profileData.swift in Sources */,
 				E17754E822EB5EED00FC2126 /* PostViewController.swift in Sources */,
 				E17754E422EA536F00FC2126 /* SearchViewController.swift in Sources */,
 				E17754DE22EA0E1C00FC2126 /* Validator.swift in Sources */,

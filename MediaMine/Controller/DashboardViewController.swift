@@ -20,6 +20,11 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //load the saved profile data
+        if let dataList = userProfileData.array(forKey: "ProfileArray") as? [String]{
+            temp = dataList
+        }
+        
         let user = Auth.auth().currentUser?.email;
         self.welcomeText.text = "Welcome, " + user!;
         
@@ -29,7 +34,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     ///////// get user stocks from db...
-    var temp = ["AAPL", "GOOG", "TSLA"] // temp data
+   // var temp = ["AAPL", "GOOG", "TSLA"] // temp data
     ///////////////////////////////////
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +43,8 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stockcell", for: indexPath);
-        let celltext = self.temp[indexPath.row]
+        //let celltext = self.temp[indexPath.row]
+        let celltext = temp[indexPath.row]
         cell.textLabel?.text = celltext
         return cell;
     }
@@ -51,7 +57,8 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let text = self.temp[indexPath.row]
+        //let text = self.temp[indexPath.row]
+        let text = temp[indexPath.row]
         self.performSegue(withIdentifier: "selectStock", sender: text)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

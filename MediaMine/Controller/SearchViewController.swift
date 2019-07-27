@@ -12,8 +12,11 @@ import UIKit
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    //saving profile data
+    let userProfileData = UserDefaults.standard
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +31,8 @@ class SearchViewController: UIViewController {
     //////////////////////////////////////////
     // populate table view with stock tickers
     //////////////////////////////////////////
-    var stocks = ["AAPL", "GOOG", "TSLA"]
+   
+    //var stocks = ["AAPL", "GOOG", "TSLA"]
     
     var search = [String]()
     var searching = false
@@ -63,8 +67,12 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             text = self.search[indexPath.row]
         }
         else{
-            text = self.stocks[indexPath.row]
+           // text = self.stocks[indexPath.row]
+            text = stocks[indexPath.row]
+
         }
+        temp.append(text)
+        userProfileData.set(temp, forKey: "ProfileArray")
         self.performSegue(withIdentifier: "selectCompany", sender: text)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
