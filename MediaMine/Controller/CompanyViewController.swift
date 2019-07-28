@@ -27,6 +27,7 @@ class CompanyViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
+    // add a company button controls if user is able to add to their dashboard list
     @IBAction func addStockClicked(_ sender: Any) {
         if temp.contains(ticker!) {
             displayAlert(userMessage: "You have already added this stock.")

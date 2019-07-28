@@ -13,9 +13,7 @@ import Firebase
 class DashboardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var welcomeText: UITextView!
-
     @IBOutlet weak var tableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +23,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
             temp = dataList.sorted(by: { $0 < $1 })
         }
         
+        // get user's email and display greeting
         let user = Auth.auth().currentUser?.email;
         self.welcomeText.text = "Welcome, " + user!;
         
@@ -33,10 +32,12 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.delegate = self
     }
     
+    // get number of stored companies
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return temp.count
     }
     
+    // display user's companies
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stockcell", for: indexPath);
         let celltext = temp[indexPath.row]
@@ -44,6 +45,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         return cell;
     }
     
+    // allow user to remove company from dashboard view by swipping and deleting
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
         if editingStyle == UITableViewCell.EditingStyle.delete{
             temp.remove(at: indexPath.row)
@@ -52,10 +54,12 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
+    // allow user to click a company to go to the company view page
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let text = temp[indexPath.row]
         self.performSegue(withIdentifier: "selectStock", sender: text)
     }
+    // pass company ticker to company view page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectStock" {
             let controller = segue.destination as! CompanyViewController
