@@ -363,7 +363,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="op9-tq-MKf"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="  Date:            Social Media Rating:         Stock Price:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cTc-Gh-8h7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="  Date:                Social Media Rating:     Stock Price:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cTc-Gh-8h7">
                                 <rect key="frame" x="35" y="167" width="307" height="30.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.75686274509999996" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -420,10 +420,32 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfF-Qz-IV1">
+                                <rect key="frame" x="31" y="583" width="312" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.75686274509999996" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="backButton"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickBackBtn:" destination="Uqv-1o-w5f" eventType="touchUpInside" id="FmN-bk-407"/>
+                                    <segue destination="lOF-AD-p7C" kind="show" identifier="goBack" id="Q0n-tL-Gpm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Lop-Dj-nBp"/>
                     </view>
+                    <connections>
+                        <outlet property="goBackBtn" destination="SfF-Qz-IV1" id="jlH-ld-gqy"/>
+                        <outlet property="webView" destination="UOf-Z1-2Bf" id="5Hf-Ti-xDv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4LQ-k9-40E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -910,8 +932,8 @@ As long as the application and the information and services on the application a
     <inferredMetricsTieBreakers>
         <segue reference="Rmy-a3-mV9"/>
         <segue reference="198-hn-ovX"/>
-        <segue reference="JCz-zN-Qgs"/>
-        <segue reference="Rh7-02-anj"/>
-        <segue reference="sBh-Rs-3CM"/>
+        <segue reference="Q0n-tL-Gpm"/>
+        <segue reference="SSQ-5K-1Uv"/>
+        <segue reference="op9-tq-MKf"/>
     </inferredMetricsTieBreakers>
 </document>
