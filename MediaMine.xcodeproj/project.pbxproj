@@ -21,6 +21,8 @@
 		E17754E422EA536F00FC2126 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17754E322EA536F00FC2126 /* SearchViewController.swift */; };
 		E17754E622EA764E00FC2126 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17754E522EA764D00FC2126 /* CompanyViewController.swift */; };
 		E17754E822EB5EED00FC2126 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17754E722EB5EED00FC2126 /* PostViewController.swift */; };
+		E1CE2BC722FA0556006B4D0E /* CompanyViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE2BC622FA0556006B4D0E /* CompanyViewRow.swift */; };
+		E1CE2BC922FA89DB006B4D0E /* PostViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE2BC822FA89DB006B4D0E /* PostViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		E17754E322EA536F00FC2126 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E17754E522EA764D00FC2126 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		E17754E722EB5EED00FC2126 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		E1CE2BC622FA0556006B4D0E /* CompanyViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewRow.swift; sourceTree = "<group>"; };
+		E1CE2BC822FA89DB006B4D0E /* PostViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewData.swift; sourceTree = "<group>"; };
 		F384711C404C4AAF679F8E32 /* Pods_MediaMine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaMine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,6 +103,8 @@
 			children = (
 				E17754DD22EA0E1C00FC2126 /* Validator.swift */,
 				C4F31D0C22EC2E1900C25B70 /* profileData.swift */,
+				E1CE2BC622FA0556006B4D0E /* CompanyViewRow.swift */,
+				E1CE2BC822FA89DB006B4D0E /* PostViewData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,8 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F31D0D22EC2E1900C25B70 /* profileData.swift in Sources */,
+				E1CE2BC922FA89DB006B4D0E /* PostViewData.swift in Sources */,
 				E17754E822EB5EED00FC2126 /* PostViewController.swift in Sources */,
 				E17754E422EA536F00FC2126 /* SearchViewController.swift in Sources */,
+				E1CE2BC722FA0556006B4D0E /* CompanyViewRow.swift in Sources */,
 				E17754DE22EA0E1C00FC2126 /* Validator.swift in Sources */,
 				C4079A9522DEC3CC00CA72B5 /* RegisterViewController.swift in Sources */,
 				E17754E022EA16C500FC2126 /* DashboardViewController.swift in Sources */,

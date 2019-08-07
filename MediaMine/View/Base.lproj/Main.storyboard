@@ -335,10 +335,14 @@
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" identifier="cell"/>
                                         <connections>
-                                            <segue destination="Uqv-1o-w5f" kind="show" id="J6w-ng-Lke"/>
+                                            <segue destination="Uqv-1o-w5f" kind="show" identifier="selectPost" id="Rmy-a3-mV9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="lOF-AD-p7C" id="gCa-0F-Mfg"/>
+                                    <outlet property="delegate" destination="lOF-AD-p7C" id="ENv-rb-SpZ"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAn-Ux-ITt">
                                 <rect key="frame" x="107" y="65" width="163" height="47"/>
@@ -380,10 +384,10 @@
             </objects>
             <point key="canvasLocation" x="1604" y="-957"/>
         </scene>
-        <!--View Controller-->
+        <!--Post View Controller-->
         <scene sceneID="DG2-fj-ilf">
             <objects>
-                <viewController id="Uqv-1o-w5f" sceneMemberID="viewController">
+                <viewController id="Uqv-1o-w5f" customClass="PostViewController" customModule="MediaMine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AkO-u2-RmY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -904,9 +908,10 @@ As long as the application and the information and services on the application a
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Rmy-a3-mV9"/>
         <segue reference="198-hn-ovX"/>
-        <segue reference="EG5-mu-0qo"/>
-        <segue reference="rYa-6S-3xo"/>
-        <segue reference="woY-6w-2XQ"/>
+        <segue reference="JCz-zN-Qgs"/>
+        <segue reference="Rh7-02-anj"/>
+        <segue reference="sBh-Rs-3CM"/>
     </inferredMetricsTieBreakers>
 </document>

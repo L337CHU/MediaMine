@@ -5,6 +5,9 @@
 //  Created by Amy Stockinger on 7/25/19.
 //  Copyright © 2019 Amy Stockinger. All rights reserved.
 //
+// TODO: fix dates on created_time timestamp
+// EXTRA: either start table at bottom on loading or reorder post display
+// EXTRA: display company name along with ticker at the top
 
 import Foundation
 import UIKit
@@ -13,6 +16,7 @@ class CompanyViewController: UIViewController {
     
     var ticker:String? = ""
     let userProfileData = UserDefaults.standard
+    var prices:[CompanyViewRow] = []
     
     @IBOutlet weak var headerText: UITextView!
     @IBOutlet weak var addStockBtn: UIButton!
@@ -24,8 +28,33 @@ class CompanyViewController: UIViewController {
         if let stockReceived = ticker {
             self.headerText.text = stockReceived
         }
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        parseJSON()
     }
+    
+    func parseJSON() {
+        let url = URL(string: "http://ec2-3-17-78-5.us-east-2.compute.amazonaws.com/index.php?command=price&company=" + ticker!)
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            do {
+                self.prices = try JSONDecoder().decode([CompanyViewRow].self, from: data!)
+                /*for c in self.prices{
+                    print(c.id)
+                    print(c.created_time)
+                    print(c.price)
+                }*/
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+            catch {
+                print("Error is : \n\(error)")
+            }
+        }
+        task.resume()
+    }
+    
     
     // add a company button controls if user is able to add to their dashboard list
     @IBAction func addStockClicked(_ sender: Any) {
@@ -49,5 +78,34 @@ class CompanyViewController: UIViewController {
         let okAction = UIAlertAction(title:"OK", style: UIAlertAction.Style.default, handler:nil);
         myAlert.addAction(okAction)
         self.present(myAlert, animated:true, completion: nil);
+    }
+}
+
+extension CompanyViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.prices.count
+    }
+    
+    // display API data
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let dataPt = self.prices[indexPath.row]
+        
+        cell.textLabel!.text = String(dataPt.created_time + " " + dataPt.predicted_impressions_count + " " +  dataPt.price)
+        return cell
+    }
+    
+    // go to post view page if user clicks a cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let text:String = prices[indexPath.row].id
+        self.performSegue(withIdentifier: "selectPost", sender: text)
+    }
+    // send post id with segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectPost" {
+            let controller = segue.destination as! PostViewController
+            let textPass = sender as! String
+            controller.postid = textPass
+        }
     }
 }
