@@ -5,7 +5,6 @@
 //  Created by Amy Stockinger on 7/25/19.
 //  Copyright © 2019 Amy Stockinger. All rights reserved.
 //
-// EXTRA: display company name along with ticker at the top
 
 import Foundation
 import UIKit
@@ -31,8 +30,9 @@ class CompanyViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         parseJSON()
     }
+
     
-    // populate table with API data
+    // get API data and reload table
     func parseJSON() {
         let url = URL(string: "http://ec2-3-17-78-5.us-east-2.compute.amazonaws.com/index.php?command=price&company=" + ticker!)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -95,7 +95,7 @@ extension CompanyViewController: UITableViewDataSource, UITableViewDelegate {
         text.append(self.ticker!)
         self.performSegue(withIdentifier: "selectPost", sender: text)
     }
-    // send post id with segue
+    // send post id and ticker with segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectPost" {
             let controller = segue.destination as! PostViewController
